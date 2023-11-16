@@ -1,0 +1,51 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Poppins", Railway}
+
+body, html {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+.desc{
+  text-align: justify;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.disclaimer {
+  text-align: justify;
+  color: #868e96;
+}
+
+.navbar {
+  background-color: #343a40;
+  padding: 10px 0;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form__input {
+  border-radius: 10px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
