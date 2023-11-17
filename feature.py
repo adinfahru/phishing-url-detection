@@ -468,7 +468,7 @@ class FeatureExtraction:
     # 28. Google_Index
     def Google_Index(self):
         try:
-            site = search(self.url, 5)
+            site = re.search(self.url, 5)
             if site:
                 return 1
             else:
