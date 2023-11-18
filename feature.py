@@ -140,6 +140,7 @@ class FeatureExtraction:
 
     # 8.SSLfinal_State
     def SSLfinal_State(self):
+        global issued_by, trusted_issuers
         try:
             domain = self.domain
 
@@ -155,7 +156,7 @@ class FeatureExtraction:
             if self.url.startswith('https://'):
                 # Check if the issuer is trusted
                 trusted_issuers = ['DigiCert Inc','DigiCert, Inc.', 'Google Trust Services LLC','Let\'s Encrypt','GlobalSign','Entrust Datacard Corporation','Comodo CA Limited','Sectigo Limited',
-                                   'GoDaddy.com, LLC.','Trustwave Holdings, Inc.','CSC Security Solutions, Inc.','Network Solutions LLC']  # Trusted issuers organization name
+                                   'GoDaddy.com, LLC.','Trustwave Holdings, Inc.','CSC Security Solutions, Inc.','Network Solutions LLC','Cloudflare, Inc.']  # Trusted issuers organization name
                 if issued_by in trusted_issuers:
                   print("Valid HTTPS, and trusted issuer")
                   return 1
@@ -511,3 +512,24 @@ class FeatureExtraction:
 
     def getFeaturesList(self):
         return self.features
+    
+    def retSSLIssuer(domain):
+        try:
+            domain = domain
+
+            ctx = ssl.create_default_context()
+            with ctx.wrap_socket(socket.socket(), server_hostname=domain) as s:
+                s.connect((domain, 443))
+                cert = s.getpeercert()
+
+            issuer = dict(x[0] for x in cert['issuer'])
+            issued_by = issuer['organizationName'].strip()
+
+            # Check if the issuer is trusted
+            if issued_by in trusted_issuers:
+                return 1, issued_by
+            else:
+                return 0, issued_by
+
+        except:
+            return -1, -1

@@ -9,6 +9,7 @@ import pickle
 warnings.filterwarnings('ignore')
 from feature import FeatureExtraction
 import joblib
+from urllib.parse import urlparse
 
 def is_phishing_gbc(x):
     #LOAD PICKLE
@@ -92,10 +93,13 @@ def index():
         gbc_result = is_phishing_gbc(x)
         cat_result = is_phishing_cat(x)
         mlp_result = is_phishing_mlp(x)
-        
+
+        domain = urlparse(url).netloc
+        issuer_valid, issued_by = FeatureExtraction.retSSLIssuer(domain)
+
         chart = True
 
-        return render_template('index.html',**gbc_result, **cat_result,**mlp_result ,url=url, chart=chart)
+        return render_template('index.html',**gbc_result, **cat_result,**mlp_result ,url=url, chart=chart,issuer_valid=issuer_valid ,issued_by=issued_by)
     else:
         gbc_result = {
             "gbc_prediction": -1,
@@ -117,7 +121,7 @@ def index():
         }
         
         chart = False
-        return render_template("index.html", **gbc_result, **cat_result, **mlp_result, chart=chart)
+        return render_template("index.html", **gbc_result, **cat_result, **mlp_result, chart=chart, issuer_valid= -2, issued_by= -2)
 
 
 if __name__ == "__main__":
