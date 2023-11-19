@@ -2,7 +2,7 @@
 Website Phishing URL Detection
 
 # Requirements
-Python
+Python <br>
 Flask
 
 # Structure Folder
