@@ -6,13 +6,13 @@ Python <br>
 Flask
 
 # Structure Folder
-├── __pycache__
-├── model
-├──gbc_model.pkl
-├──cat_model.pkl
-├──mlp_model.pkl
-├──X_test.pkl
-├──y_test.pkl
+├── __pycache__ <br>
+├── model <br>
+├──gbc_model.pkl <br>
+├──cat_model.pkl <br>
+├──mlp_model.pkl <br>
+├──X_test.pkl <br>
+├──y_test.pkl <br>
 ├── static
 ├── images
 ├── styles.css
