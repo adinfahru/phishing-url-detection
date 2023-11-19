@@ -6,6 +6,22 @@ Python <br>
 Flask
 
 # Structure Folder
+├── __pycache__
+├── model
+│   ├── gbc_model.pkl
+│   ├── cat_model.pkl
+│   ├── mlp_model.pkl
+│   ├── X_test.pkl
+│   ├── y_test.pkl
+├── static
+│   ├── images
+│   ├── styles.css
+│   ├── styles-pro.scss
+├── templates
+│   ├── index.html
+├── app.py
+├── feature.py
+├── requirements.txt
 
 # Installation
 Program website ini ditulis menggunakan python versi 3.11.1, Setelah men-clone dan mendownload python, 
@@ -16,7 +32,7 @@ oleh karena itu jalankan command prompt/terminal : pip install -r requirements.t
 2. Buat file untuk virtual environtment : virtualenv venv
 3. Aktivasi virtual environment : venv/Scripts/activate
 4. Install Flask : pip install flask
-5. Install packages : pip install requirements.txt apabila ada requirements yang error saat instalasi, mohon install manual dengan pip install (requirements yang error)
+5. Install packages : pip install -r requirements.txt
 6. Jalankan codenya : python app.py
 
 
