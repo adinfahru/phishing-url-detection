@@ -27,8 +27,7 @@ Flask
 
 ## Installation
 Program website ini ditulis menggunakan python versi 3.11.1, Setelah men-clone dan mendownload python, 
-untuk menjalankan program ini harus menginstall beberapa packages dan libraries, 
-oleh karena itu jalankan command prompt/terminal : pip install -r requirements.txt.
+untuk menjalankan program ini harus menginstall beberapa packages dan libraries.
 
 1. Install virtual environment : pip install virtualenv
 2. Buat file untuk virtual environtment : virtualenv venv
