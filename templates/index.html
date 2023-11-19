@@ -150,7 +150,7 @@
         <div class="container mt-5 text-center">
           <hr style="border: 1px solid;">
           <div class="mt-5 mb-5" style="color: #231557;">
-            <h5>This is the Chart Accuracy After Training Three Machine Learning Models : </h5>
+            <h5>Chart Accuracy After Training Three Machine Learning Models : </h5>
           </div>
           <div class="row">
             <div class="col-lg-12 text-center">
@@ -257,7 +257,7 @@
         mlp_malicious_probability) / 3).toFixed(2)
 
       if (total_safe_probability <= 100 && total_safe_probability >= 50) {
-        var label = "<div class='alert alert-success mt-3' role='alert'> Average Result :  " + total_safe_probability +
+        var label = "<div class='alert alert-primary mt-3' role='alert'> Average Result :  " + total_safe_probability +
           "% safe </div>";
         document.getElementById("totalResult").innerHTML = label;
       } else if (total_safe_probability >= 0 && total_safe_probability < 50) {
@@ -268,7 +268,7 @@
 
       // Logika untuk menampilkan hasil prediksi jika URL menggunakan "https"
       if (gbc_safe_probability <= 100 && gbc_safe_probability >= 50) {
-        var label = "<div class='alert alert-success mt-3' role='alert'> Result :  " + gbc_safe_probability +
+        var label = "<div class='alert alert-primary mt-3' role='alert'> Result :  " + gbc_safe_probability +
           "% safe </div>";
         document.getElementById("prediction_gbc").innerHTML = label;
       } else if (gbc_safe_probability >= 0 && gbc_safe_probability < 50) {
@@ -279,7 +279,7 @@
 
       // Logika untuk menampilkan hasil prediksi jika URL menggunakan "https"
       if (cat_safe_probability <= 100 && cat_safe_probability >= 50) {
-        var label = "<div class='alert alert-success mt-3' role='alert'> Result :  " + cat_safe_probability +
+        var label = "<div class='alert alert-primary mt-3' role='alert'> Result :  " + cat_safe_probability +
           "% safe </div>";
         document.getElementById("prediction_cat").innerHTML = label;
       } else if (cat_safe_probability >= 0 && cat_safe_probability < 50) {
@@ -290,7 +290,7 @@
 
       // Logika untuk menampilkan hasil prediksi jika URL menggunakan "https"
       if (mlp_safe_probability <= 100 && mlp_safe_probability >= 50) {
-        var label = "<div class='alert alert-success mt-3' role='alert'> Result :  " + mlp_safe_probability +
+        var label = "<div class='alert alert-primary mt-3' role='alert'> Result :  " + mlp_safe_probability +
           "% safe </div>";
         document.getElementById("prediction_mlp").innerHTML = label;
       } else if (mlp_safe_probability >= 0 && mlp_safe_probability < 50) {

@@ -280,11 +280,11 @@ div#loading {
     left: 0;
   }
 
-  /* Flow */
-  .flow-card {
-    margin: 10px;
-    border-radius: 10px;
-    overflow: hidden;
-    min-height: 100px;
-    display: flex;
-  }
+  .card .read-more:hover{
+    font-size: 10px;
+}
+
+.card:hover{
+    box-shadow: 8px 8px 8px powderblue;
+    transform:scale(1);
+}
