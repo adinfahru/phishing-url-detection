@@ -1,11 +1,12 @@
- # User Manual
+ ## User Manual
 Website Phishing URL Detection
 
-# Requirements
+## Requirements
 Python <br>
 Flask
 
-# Structure Folder
+## Structure Folder
+```
 ├── __pycache__
 ├── model
 │   ├── gbc_model.pkl
@@ -22,8 +23,9 @@ Flask
 ├── app.py
 ├── feature.py
 ├── requirements.txt
+```
 
-# Installation
+## Installation
 Program website ini ditulis menggunakan python versi 3.11.1, Setelah men-clone dan mendownload python, 
 untuk menjalankan program ini harus menginstall beberapa packages dan libraries, 
 oleh karena itu jalankan command prompt/terminal : pip install -r requirements.txt.
