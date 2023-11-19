@@ -8,7 +8,7 @@ Flask
 # Structure Folder
 ├── __pycache__ <br>
 ├── model <br>
-  ├──gbc_model.pkl <br>
+&nbsp;├──gbc_model.pkl <br>
   ├──cat_model.pkl <br>
   ├──mlp_model.pkl <br>
   ├──X_test.pkl <br>
