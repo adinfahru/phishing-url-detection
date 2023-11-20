@@ -37,7 +37,7 @@ untuk menjalankan program ini harus menginstall beberapa packages dan libraries.
 6. Jalankan codenya : python app.py
 
 
-# Byte Brigate Team
+## Byte Brigate Team
 1. Steven Harun Samba
 2. Mohamad Fahrudin
 3. Abiyoga Dhaniswara
