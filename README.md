@@ -1,5 +1,5 @@
  ## User Manual
-Website Phishing URL Detection
+Website Phishing URL Detection with Three Different Machine Learning Models
 
 ## Requirements
 Python <br>
